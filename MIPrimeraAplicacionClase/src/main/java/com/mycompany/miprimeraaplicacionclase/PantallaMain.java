@@ -24,12 +24,12 @@ public class PantallaMain extends javax.swing.JFrame {
     
     // hay ciertas partes del codigo como esta que no me permiten modificarlas
     
-    
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
         Volver = new javax.swing.JToggleButton();
+        jLblMensaje = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -45,16 +45,22 @@ public class PantallaMain extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(103, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(Volver, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(103, 103, 103))
+                .addGap(99, 99, 99))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(58, 58, 58)
+                .addComponent(jLblMensaje, javax.swing.GroupLayout.PREFERRED_SIZE, 268, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(74, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(120, 120, 120)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(115, Short.MAX_VALUE)
+                .addComponent(jLblMensaje)
+                .addGap(51, 51, 51)
                 .addComponent(Volver, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(147, Short.MAX_VALUE))
+                .addGap(101, 101, 101))
         );
 
         pack();
@@ -64,6 +70,7 @@ public class PantallaMain extends javax.swing.JFrame {
         // TODO add your handling code here:
         PantallaDialogo pantalladialogo =  new PantallaDialogo(this,true);
         pantalladialogo.setVisible(true);
+        jLblMensaje.setText("Bienveinido " + pantalladialogo.getMensaje());
     }//GEN-LAST:event_VolverActionPerformed
 
     /**
@@ -105,5 +112,6 @@ public class PantallaMain extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JToggleButton Volver;
+    private javax.swing.JLabel jLblMensaje;
     // End of variables declaration//GEN-END:variables
 }
