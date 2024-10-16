@@ -11,4 +11,5 @@
         <maven.compiler.target>17</maven.compiler.target>
         <exec.mainClass>com.mycompany.misegundaaplicacion.MiSegundaAplicacion</exec.mainClass>
     </properties>
+    <name>a2_MiSegundaAplicacion</name>
 </project>

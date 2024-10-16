@@ -5,7 +5,7 @@
 package com.mycompany.miprimeraaplicacionclase;
 
 /**
- * @author Usuario
+ * @author Alejandro , Axel y Antonio
  */
 public class PantallaMain extends javax.swing.JFrame {
 
@@ -67,8 +67,8 @@ public class PantallaMain extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void VolverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VolverActionPerformed
-        // TODO add your handling code here:
-        PantallaDialogo pantalladialogo =  new PantallaDialogo(this,true);
+
+        PantallaDialogo pantalladialogo =  new PantallaDialogo(this,true); // modal es que hatsa que no cierre el cuadro de dialogo no puedo interactuar con otra ventana 
         pantalladialogo.setVisible(true);
         jLblMensaje.setText("Bienveinido " + pantalladialogo.getMensaje());
     }//GEN-LAST:event_VolverActionPerformed
