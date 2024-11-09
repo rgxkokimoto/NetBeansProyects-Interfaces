@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="359.0" prefWidth="504.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="practica6.main.ProfileController">
+   <children>
+      <ImageView fx:id="imgPerfil" fitHeight="128.0" fitWidth="169.0" layoutX="59.0" layoutY="116.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/login.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="238.0" layoutY="90.0" text="Apellidos" />
+      <TextField fx:id="txtApellidos" layoutX="238.0" layoutY="108.0" prefHeight="26.0" prefWidth="246.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <Label layoutX="238.0" layoutY="150.0" text="Direccion" />
+      <TextField fx:id="txtDireccion" layoutX="238.0" layoutY="168.0" prefHeight="26.0" prefWidth="246.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <Label layoutX="238.0" layoutY="208.0" text="Email" />
+      <TextField fx:id="txtEmail" layoutX="238.0" layoutY="226.0" prefHeight="26.0" prefWidth="246.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <Label layoutX="238.0" layoutY="263.0" text="Cambiar Contraseña" />
+      <Label layoutX="238.0" layoutY="35.0" text="Nombre" />
+      <TextField fx:id="txtNombre" layoutX="238.0" layoutY="53.0" prefHeight="26.0" prefWidth="246.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <Button fx:id="btnGuardar" layoutX="376.0" layoutY="319.0" mnemonicParsing="false" onAction="#handleGuardarCambiosAction" style="-fx-background-color: #F0C200; -fx-cursor: hand; -fx-background-radius: 10;" text="Guardar Cambios" textFill="WHITE" />
+      <PasswordField fx:id="psswdCambiarCont" cache="true" layoutX="238.0" layoutY="282.0" prefHeight="26.0" prefWidth="246.0" promptText="Escribe tu nueva contraseña">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </PasswordField>
+      <Button fx:id="btnCambiarImg" layoutX="238.0" layoutY="319.0" mnemonicParsing="false" onAction="#handleCambiarImagenAction" style="-fx-background-color: #F0C200; -fx-cursor: hand; -fx-background-radius: 10;" text="Cambiar Imagen" textFill="WHITE" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,32 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 31 oct 2024, 9:21:40
+    Author     : ignac
+*/
+
+.button {
+    -fx-background-color:  #F0C200;
+    -fx-background-radius: 10px;
+    -fx-text-fill: white;
+}
+/*
+.button :hover{
+        color:#1717FF;
+}
+*/
+#listaArchivos {
+    font-family: "System";
+    font-size: 14px;
+    -fx-border-radius: 10px;
+    -fx-background-radius: 10px;
+    -fx-padding: 5px;
+    -fx-border-color: #F0C200;
+    -fx-border-width: 2px;
+    -fx-background-insets: 0,1;
+}
+
+
+
