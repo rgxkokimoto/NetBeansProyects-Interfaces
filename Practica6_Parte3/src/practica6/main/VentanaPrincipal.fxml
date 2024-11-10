@@ -10,7 +10,7 @@
 
 <AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="practica6.main.VentanaPrincipalController">
    <children>
-      <Label alignment="CENTER" prefHeight="91.0" prefWidth="643.0" style="-fx-background-color: #f0c200;" text="Mi Aplicación">
+      <Label alignment="CENTER" prefHeight="91.0" prefWidth="644.0" style="-fx-background-color: #f0c200;" text="Mi Aplicación">
          <font>
             <Font name="JetBrains Mono ExtraBold" size="40.0" />
          </font>
