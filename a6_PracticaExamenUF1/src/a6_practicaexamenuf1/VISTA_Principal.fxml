@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="441.0" prefWidth="646.0" stylesheets="@style_principal.css" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/23" fx:controller="a6_practicaexamenuf1.CONTROL_VPrincipal">
+    <children>
+        <Label fx:id="label" layoutX="126" layoutY="120" minHeight="16" minWidth="69" />
+      <VBox id="vBoxP" layoutY="104.0" prefHeight="337.0" prefWidth="135.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#handleButtonGoProfile" prefHeight="82.0" prefWidth="135.0">
+               <graphic>
+                  <ImageView fitHeight="74.0" fitWidth="127.0" pickOnBounds="true" preserveRatio="true" />
+               </graphic>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#handleButtonGoFiles" prefHeight="85.0" prefWidth="145.0">
+               <graphic>
+                  <ImageView fitHeight="76.0" fitWidth="122.0" pickOnBounds="true" preserveRatio="true" />
+               </graphic>
+            </Button>
+            <Button layoutX="10.0" layoutY="102.0" mnemonicParsing="false" onAction="#handleButtonGoTask" prefHeight="85.0" prefWidth="145.0">
+               <graphic>
+                  <ImageView fitHeight="76.0" fitWidth="125.0" pickOnBounds="true" preserveRatio="true" />
+               </graphic>
+            </Button>
+            <Button layoutX="10.0" layoutY="188.0" mnemonicParsing="false" prefHeight="85.0" prefWidth="145.0">
+               <graphic>
+                  <ImageView fitHeight="80.0" fitWidth="127.0" onDragDetected="#handleButtonExit" pickOnBounds="true" preserveRatio="true" />
+               </graphic>
+            </Button>
+         </children>
+      </VBox>
+      <Pane id="PnlTitle" layoutY="-1.0" prefHeight="106.0" prefWidth="647.0">
+         <children>
+            <Label layoutX="179.0" layoutY="37.0" text="MI Aplicación JAVAfx">
+               <font>
+                  <Font name="JetBrains Mono Regular" size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <AnchorPane fx:id="mainContentArea" layoutX="135.0" layoutY="104.0" prefHeight="338.0" prefWidth="512.0" />
+    </children>
+</AnchorPane>

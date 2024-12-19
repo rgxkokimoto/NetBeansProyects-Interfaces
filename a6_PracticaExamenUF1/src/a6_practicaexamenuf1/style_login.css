@@ -1,0 +1,20 @@
+/*
+ * Empty Stylesheet file.
+
+    un pequeño recuerdo 
+
+    # los son para un componente completo 
+
+    el punto (.)  va a referneciar al tipo entero rollo todos los botones 
+
+ */
+
+ #PnlTitle{
+         -fx-background-color:  #a4d379;
+ }
+ 
+ .button {
+          -fx-background-color:  #96d35f;
+          -fx-background-radius: 10px;
+          -fx-text-fill: white;
+ }

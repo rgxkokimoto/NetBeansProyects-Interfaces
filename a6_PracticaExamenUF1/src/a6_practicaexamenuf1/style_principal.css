@@ -1,0 +1,20 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 13 nov 2024, 17:28:14
+    Author     : Alejandro
+*/
+
+.button{
+    -fx-cursor: hand;
+}
+
+ #PnlTitle{
+         -fx-background-color:  #a4d379;
+ }
+ 
+ #vBoxP {
+     -fx-background-color: #c6ff92;
+ }
