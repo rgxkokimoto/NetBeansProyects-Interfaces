@@ -80,7 +80,7 @@ public class VentanaLoginController implements Initializable {
                         datosA = linea.split(","); // asi podremos usar los datos que nos dan
                         if (datosA[0].equals(jTxtUsuario.getText()) && datosA[1].equals(jPsswdCont.getText())) {
                              // si se encuentran la contraseña y el usario se permite entrar
-                                UsuarioLogueado.getInstance().setNombre(jTxtUsuario.getText()); // la intancia de usario es el usario individual su cuenta
+                                UsuarioLogueado.getInstance().setNombre(jTxtUsuario.getText()); // crea una nueva instancia de usario
                                 Parent root = FXMLLoader.load(getClass().getResource("VentanaPrincipal.fxml"));
                                 Scene scene = new Scene(root);
                                 Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -107,7 +107,9 @@ public class VentanaLoginController implements Initializable {
                     Alert alert = new Alert(Alert.AlertType.ERROR);
                     alert.setTitle("ERROR INICIO SESION");
                     alert.setHeaderText("Usuario/Contraseña incorrectas");
-                    alert.showAndWait();
+                    alert.showAndWait(); 
+                    // TODO : quiero enontrar un metodo para controlar el color 
+                    jTxtUsuario.setText("Mal");
                 }
             } else {
                 archivo.mkdir();
@@ -124,34 +126,33 @@ public class VentanaLoginController implements Initializable {
 
     @FXML
     private void handleRegisterAction(ActionEvent event) {
-        BufferedWriter writer = null;
-        try {
-            writer = new BufferedWriter(new FileWriter("src/practica6/Ficheros/usuarios.txt", true));
-            if (!jTxtUsuario.getText().isEmpty() && !jPsswdCont.getText().isEmpty()) {
-                String datos = jTxtUsuario.getText() + "," + jPsswdCont.getText();
-                System.out.println(datos);
-                writer.write(datos);
-                writer.newLine();
-                System.out.println("Usuario registrado");
-            } else {
-                Alert alert = new Alert(Alert.AlertType.ERROR);
-                alert.setTitle("ERROR REGISTRO");
-                alert.setHeaderText("Datos incompletos");
-                alert.setContentText("El usuario y la contraseña no pueden estar vacios");
-                alert.showAndWait();
-            }
-
-        } catch (IOException ex) {
-            Logger.getLogger(VentanaLoginController.class.getName()).log(Level.SEVERE, null, ex);
-        } finally {
-            if (writer != null) {
-                try {
-                    writer.close();
-                } catch (IOException ex) {
+            BufferedWriter writer = null;
+            try {  
+                    writer = new BufferedWriter(new FileWriter("src/practica6/Ficheros/usuarios.txt", true)); // Recuerda true añadir false: sobrescribir 
+                    if (!jTxtUsuario.getText().isEmpty() && !jPsswdCont.getText().isEmpty()) { // MIentras no este vacio 
+                            String datos = jTxtUsuario.getText() + "," + jPsswdCont.getText();
+                            System.out.println(datos);
+                            writer.write(datos);
+                            writer.newLine();
+                            System.out.println("Usuario registrado");
+                    } else {
+                            Alert alert = new Alert(Alert.AlertType.ERROR);
+                            alert.setTitle("ERROR REGISTRO");
+                            alert.setHeaderText("Datos incompletos");
+                            alert.setContentText("El usuario y la contraseña no pueden estar vacios oh puede que el usario ya exista");
+                            alert.showAndWait();
+                    }
+            } catch (IOException ex) {
                     Logger.getLogger(VentanaLoginController.class.getName()).log(Level.SEVERE, null, ex);
+            } finally {
+                if (writer != null) {
+                    try {
+                        writer.close();
+                    } catch (IOException ex) {
+                        Logger.getLogger(VentanaLoginController.class.getName()).log(Level.SEVERE, null, ex);
+                    }
                 }
             }
-        }
     }
 
 }
